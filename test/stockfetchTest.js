@@ -22,13 +22,7 @@ describe('stockfetch e2e', function () {
             return 'report';
         };
 
-        const args = {
-            fetchSymbols: fetchSymbols,
-            fetchPrices: fetchPrices,
-            prepareReport: prepareReport
-        };
-
-        const fetch = stockfetch(args);
+        const fetch = stockfetch({fetchSymbols, fetchPrices, prepareReport});
 
         // when
         const reportPromise = fetch('someFile');
