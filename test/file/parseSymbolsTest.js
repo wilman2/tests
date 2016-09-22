@@ -7,9 +7,18 @@ describe('parse symbols', function () {
         assert.deepEqual(symbols, ['GOOG', 'AAPL']);
     });
 
-    it('should return empty array', function () {
+    it('should return empty array from empty content', function () {
         const symbols = parseSymbols('');
         assert.deepEqual(symbols, []);
     });
+
+    it('should return empty array', function () {
+        const symbols = parseSymbols(' ');
+        assert.deepEqual(symbols, []);
+    });
+
+
+
+    //'AAPL \nGOOG\n\n  ' --> [GOOG]
 
 });

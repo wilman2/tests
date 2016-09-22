@@ -46,12 +46,6 @@ describe('fetch symbols', function () {
         expectedAssertionCount++;
         assert.deepEqual(symbols, ['A', 'B']);
         assert.equal(expectedAssertionCount, 3, 'expected number of assertions');
-
-        // fetch('someFile').then(function(symbols) {
-        //     expectedAssertionCount++;
-        //     assert.deepEqual(symbols, ['A', 'B']);
-        //     assert.equal(expectedAssertionCount, 3, 'expected number of assertions');
-        //     done();
-        // }).catch(done);
+        
     });
 });
