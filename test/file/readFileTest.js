@@ -11,4 +11,16 @@ describe('read file', function () {
         assert.equal(result, 'GOOG\r\nAAPL\r\nORCL\r\nMSFT')
     });
 
+    it('[intergration testt] should fail on non exist file', function *() {
+        const read = readFile();
+
+        try {
+            yield read('./symbols_invalid');
+            throw 'should failed on nonexistent file';
+        } catch(e) {
+            assert.equal(e, 'Cannot read file ./symbols_invalid');
+        }
+
+    });
+
 });
