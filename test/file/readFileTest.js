@@ -62,7 +62,7 @@ describe('read file', function () {
 
     });
 
-    it('[parsertest] should return GOOG\nAPPL --> [GOOG, APPL]', function *() {
+    it('[parsertest] should return GOOGnAPPL --> [GOOG, APPL]', function *() {
         //given
         const input = 'GOOG\nAPPL';
         
